@@ -1,0 +1,283 @@
+.section {
+  padding: 0; /* ลบ padding เพื่อให้เต็มจอ */
+  min-height: 100vh; /* ให้ความสูงเต็มหน้าจอ */
+  width: 100vw; /* ให้ความกว้างเต็มหน้าจอ */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a2a44; /* ปรับสีพื้นหลังให้เข้ากับภาพ */
+  color: #fff; /* ปรับสีตัวอักษรให้เป็นสีขาว */
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: 1%;
+}
+
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section h2 .icon {
+  font-size: 24px;
+  color: #ffd700; /* ปรับสีไอคอนให้เป็นสีเหลืองตามภาพ */
+}
+
+/* สไตล์สำหรับส่วน Skills */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* เพิ่มระยะห่างระหว่างหมวดหมู่ */
+  width: 100%; /* ให้เต็มความกว้าง */
+  max-width: none; /* ลบ max-width เพื่อให้ขยายเต็มจอ */
+  padding: 0 20px; /* เพิ่ม padding ด้านข้างเล็กน้อยเพื่อป้องกันการชิดขอบเกินไป */
+  height: auto;
+  box-sizing: border-box;
+}
+
+.skill-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category-title {
+  font-size: 72px; /* เพิ่มขนาดตัวอักษรให้ใหญ่ขึ้นตามภาพ */
+  color: #a3bffa;
+  opacity: 0.2;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* เพิ่มระยะห่างระหว่าง skill-item */
+  width: 100%; /* ให้เต็มความกว้าง */
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px 25px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: scale(1.05);
+}
+
+.skill-item img {
+  width: 40px; /* เพิ่มขนาดไอคอนให้ใหญ่ขึ้น */
+  height: 40px;
+  object-fit: contain;
+}
+
+.skill-item p {
+  font-size: 18px; /* เพิ่มขนาดตัวอักษร */
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 0;
+  }
+
+  .section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .category-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+
+  .skills-container {
+    gap: 50px;
+    padding: 0 15px;
+  }
+
+  .skill-list {
+    gap: 20px;
+  }
+
+  .skill-item {
+    padding: 10px 20px;
+  }
+
+  .skill-item img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .skill-item p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-title {
+    font-size: 36px;
+  }
+
+  .skill-list {
+    gap: 15px;
+  }
+
+  .skill-item {
+    padding: 8px 15px;
+  }
+
+  .skill-item img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .skill-item p {
+    font-size: 14px;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.skill-item {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  will-change: transform, opacity;
+}
+
+.skill-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.skill-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.skill-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+/* เพิ่มตามจำนวน item จริง */
+
+.category-title,
+.section h2 {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+@media (max-width: 1024px) {
+  .category-title {
+    font-size: 60px;
+  }
+
+  .section h2 {
+    font-size: 32px;
+  }
+
+  .skill-item {
+    padding: 10px 22px;
+  }
+
+  .skill-item img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .skill-item p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    margin-top: 15%;
+    padding: 20px 10px;
+  }
+
+  .section h2 {
+    font-size: 26px;
+    margin-bottom: 25px;
+  }
+
+  .category-title {
+    font-size: 42px;
+    margin-bottom: 20px;
+  }
+
+  .skills-container {
+    gap: 40px;
+    padding: 0 10px;
+  }
+
+  .skill-list {
+    gap: 18px;
+  }
+
+  .skill-item {
+    flex-direction: column;
+    padding: 10px 16px;
+  }
+
+  .skill-item img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .skill-item p {
+    font-size: 15px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    margin-top: 20%;
+    padding: 15px 8px;
+  }
+
+  .section h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .category-title {
+    font-size: 30px;
+  }
+
+  .skills-container {
+    gap: 30px;
+  }
+
+  .skill-list {
+    gap: 12px;
+  }
+
+  .skill-item {
+    padding: 8px 12px;
+  }
+
+  .skill-item img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .skill-item p {
+    font-size: 13px;
+  }
+}

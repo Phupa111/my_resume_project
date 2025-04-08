@@ -1,0 +1,195 @@
+/* Header พื้นฐาน */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #1a2a44;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+header.scrolled {
+  background-color: rgba(26, 42, 68, 0.9);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 30px;
+}
+
+nav ul li a {
+  color: #a3bffa;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav ul li a:hover {
+  color: #fff;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons a {
+  margin-left: 15px;
+}
+
+.social-icons img {
+  width: 20px;
+  filter: invert(70%);
+}
+
+/* ===== Responsive Style ===== */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .logo {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 18px;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  .social-icons img {
+    width: 18px;
+  }
+}
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #a3bffa;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 30px;
+}
+
+nav ul li a {
+  color: #a3bffa;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav ul li a:hover {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #1a2a44;
+    width: 100%;
+    padding: 10px 0;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 20px;
+  }
+}
+.no-scroll {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  nav ul.show {
+    max-height: 500px; /* Adjust based on your content */
+  }
+
+  /* Better mobile menu positioning */
+  header {
+    position: relative;
+  }
+
+  nav {
+    position: static;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+}
+
+/* Better button styling */
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
