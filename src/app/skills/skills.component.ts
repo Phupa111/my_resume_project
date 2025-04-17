@@ -6,17 +6,35 @@ import {
   transition,
   query,
   stagger,
-  state,
 } from '@angular/animations';
 
 @Component({
   selector: 'app-skills',
-  imports: [],
   templateUrl: './skills.component.html',
-  styleUrl: './skills.component.css',
+  styleUrls: ['./skills.component.css'],
+  animations: [
+    trigger('fadeInStagger', [
+      transition(':enter', [
+        query(
+          '.skill-item',
+          [
+            style({ opacity: 0, transform: 'translateY(20px)' }),
+            stagger('100ms', [
+              animate(
+                '600ms ease-out',
+                style({ opacity: 1, transform: 'translateY(0)' })
+              ),
+            ]),
+          ],
+          { optional: true }
+        ),
+      ]),
+    ]),
+  ],
 })
 export class SkillsComponent implements OnInit {
   hoverStates: { [key: string]: string } = {};
+
   constructor() {}
 
   ngOnInit(): void {}

@@ -1,6 +1,6 @@
 .section {
   padding: 0; /* ลบ padding เพื่อให้เต็มจอ */
-  min-height: 100vh; /* ให้ความสูงเต็มหน้าจอ */
+  /* ให้ความสูงเต็มหน้าจอ */
   width: 100vw; /* ให้ความกว้างเต็มหน้าจอ */
   display: flex;
   flex-direction: column;
@@ -10,7 +10,6 @@
   color: #fff; /* ปรับสีตัวอักษรให้เป็นสีขาว */
   text-align: center;
   box-sizing: border-box;
-  margin-top: 1%;
 }
 
 .section h2 {
@@ -280,4 +279,12 @@
   .skill-item p {
     font-size: 13px;
   }
+}
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.fade-in-section.fade-in-section {
+  animation: fadeInUp 0.8s ease forwards;
 }
