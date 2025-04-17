@@ -1,0 +1,110 @@
+<section
+  id="Project"
+  class="w-full py-12 bg-gradient-to-br from-[#1a2a44] to-[#2e4066] text-white flex flex-col justify-center items-center gap-10"
+>
+  <h3 class="text-3xl md:text-4xl font-extrabold text-center tracking-tight">
+    Projects
+  </h3>
+
+  <div
+    class="flex justify-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-4 place-items-center"
+  >
+    <a
+      href="https://todo-web-qsxh.vercel.app/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <div
+        class="group flex flex-col justify-center items-center gap-4 bg-[#243a5e]/80 p-6 rounded-2xl shadow-lg hover:shadow-xl hover:bg-[#2e4a78] transition-all duration-300 transform hover:-translate-y-1"
+      >
+        <img
+          src="/taskFlowWeb.png"
+          alt="TaskFlow Web"
+          class="w-80 h-52 object-cover rounded-md group-hover:scale-110 transition-transform duration-300"
+        />
+        <p class="text-xl font-semibold text-center">TaskFlow Web</p>
+        <p class="text-sm text-gray-300 text-center">
+          เว้บไวต์สร้าง to-do list เล็กๆ ใช้ React+.Net core.+mongodb fornt-end
+          deploy บน vercel Back-end depoy บน azure
+        </p>
+      </div>
+    </a>
+  </div>
+</section>
+
+<style>
+  h3 {
+    font-size: 1.875rem;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: -0.025em;
+  }
+
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 2.25rem;
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(36, 58, 94, 0.8);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    transform: translateY(0);
+  }
+
+  .group:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    background: #2e4a78;
+    transform: translateY(-0.25rem);
+  }
+  img {
+    width: 20rem; /* 320px */
+    height: 13rem; /* 208px */
+    object-fit: cover;
+    border-radius: 0.375rem;
+    transition: transform 0.3s ease;
+  }
+  .group:hover img {
+    transform: scale(1.1);
+  }
+
+  p:first-of-type {
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  p:last-of-type {
+    font-size: 0.875rem;
+    color: #d1d5db;
+    text-align: center;
+  }
+</style>

@@ -22,7 +22,7 @@ main {
   justify-content: space-between;
   align-items: center;
   padding: 50px;
-  min-height: 100vh;
+  height: 100vh;
   background-color: #1a2a44;
   flex-wrap: wrap; /* เพิ่มเพื่อให้ปรับตัวในหน้าจอแคบ */
 }
